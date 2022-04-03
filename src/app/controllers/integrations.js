@@ -1,7 +1,7 @@
-const { setTime, sendDeployMessage, sendMessageToChannel } = require('./function');
+const { setTime, sendDeployMessage, sendMessageToChannel } = require('../helpers/helper');
 
 // Keep the interval function to stoop when is required
-var interval;
+var intervals;
 
 // Set the interaction functions
 const interations = {
@@ -15,13 +15,13 @@ const interations = {
     sendDeployMessage(channel);
 
     // Set the interval to send the message every <time> hours
-    interval = setInterval(() => {
+    intervals[channel.id] = setInterval(() => {
       sendDeployMessage(channel);
     }, time * 3600000);
   },
 
   '!stop': (channel) => {
-    clearInterval(interval);
+    clearInterval(intervals[channel.id]);
     sendMessageToChannel(channel, `From now on, you will no longer receive automatic messages.`);
   },
 

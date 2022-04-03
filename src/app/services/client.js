@@ -1,5 +1,5 @@
 const { Client, Intents } = require('discord.js');
-const { runCommand } = require('./kernel');
+const { runCommand } = require('../helpers/kernel');
 
 // Create a new Discord client
 const client = new Client({

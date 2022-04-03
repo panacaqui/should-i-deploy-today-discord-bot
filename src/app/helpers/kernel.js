@@ -1,4 +1,4 @@
-const interations = require('./integrations');
+const interations = require('../controllers/integrations');
 
 // Get the arguments from the command
 const getArgs = (content) => {

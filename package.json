@@ -1,9 +1,24 @@
 {
-  "engines": {
-    "node": "16.14.2"
-  },
-  "dependencies": {
-    "axios": "^0.26.1",
-    "discord.js": "^13.6.0"
-  }
+    "name": "should-i-deploy-today-discord-bot",
+    "version": "2.0.0",
+    "description": "Discord Bot for Developers",
+    "main": "src/index.js",
+    "repository": "https://github.com/panacaqui/should-i-deploy-today-discord-bot",
+    "author": "Gustavo <dev.gustavo.oliveira@gmail.com>",
+    "license": "MIT",
+    "engines": {
+        "node": "16.14.2"
+    },
+    "scripts": {
+        "dev": " node_modules/nodemon/bin/nodemon.js src/index.js src/index.js",
+        "start": "node src/index.js"
+    },
+    "dependencies": {
+        "axios": "^0.26.1",
+        "discord.js": "^13.6.0",
+        "express": "^4.18.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.16"
+    }
 }

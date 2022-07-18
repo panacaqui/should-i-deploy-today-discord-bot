@@ -41,7 +41,7 @@ const sendDeployMessage = (channel) => {
 
 const setTime = (params) => {
     if (params.length === 0 || params[0] === '' || parseInt(params[0]) === NaN) {
-        return 24;
+        return 6;
     }
 
     return params[0];

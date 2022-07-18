@@ -6,6 +6,12 @@ async function send(channelId, log) {
 }
 
 class LogController {
+    async list(request, response) {
+        const logs = await LogRepository.list();
+
+        response.json(logs);
+    }
+
     async log(request, response) {
         const log = LogRepository.create(request.body);
 

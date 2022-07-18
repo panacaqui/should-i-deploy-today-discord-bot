@@ -3,6 +3,12 @@ function numberWithTwoCharacters(number) {
 }
 
 class LogRepository {
+    async list() {
+        return new Promise((resolve) => {
+            resolve([]);
+        });
+    }
+
     create({ message, code, data }) {
         if (!message) {
             return null;

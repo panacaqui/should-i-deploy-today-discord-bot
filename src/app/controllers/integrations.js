@@ -12,6 +12,7 @@ const interations = {
 
         sendDeployMessage(channel);
 
+        // Set interval in 3600000 ml (1h)
         intervals[channel.id] = setInterval(() => {
             sendDeployMessage(channel);
         }, time * 3600000);

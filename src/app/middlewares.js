@@ -1,4 +1,8 @@
 module.exports = {
+    hasToBeAdmin: (request, response, next) => {
+        next();
+    },
+
     channelHasToExist: (request, response, next) => {
         const { channelId } = request.params;
 

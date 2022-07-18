@@ -1,3 +1,4 @@
+const { sendMessageToChannel } = require('../helpers/helper');
 const interations = require('../controllers/integrations');
 
 const getArgs = (content) => {
